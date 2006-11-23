@@ -1,0 +1,51 @@
+BSD-setproctitle version 0.01
+=============================
+
+This module provides a Perl interface to the "setproctitle",
+"getprogname" and "setprogname" routines found in modern BSD variants.
+
+The setprogname() function manipulates the name of the current
+program. This name is used by the libc error-reporting routines to
+produce consistent output. Depending on your OS setprogname might be
+actually a no-op.
+
+The setproctitle() function sets the process title that appears on the
+ps(1) command output. An empty string (translated internally to a NULL
+pointer) or a string starting with a dash might trigger special
+behaviour - consult your systems manpage! While the C setproctitle(3)
+routine is vulnerable to format string attacks, this implementation is
+not.  Only a single string argument is allowed which is taken
+literally.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module works together with a newer *BSD variant:
+FreeBSD >= 4.4 should work.
+NetBSD >= 1.6 should work.
+All DragonFlyBSD releases should work.
+A recent OpenBSD should work too.
+
+Basically every OS having the aforementioned routines in the C library
+should be fine.
+
+If you have more specific information about supported BSD variants
+please report to the author so this section can be updated!
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2006 by Martin Kammerhofer
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available.
+
+

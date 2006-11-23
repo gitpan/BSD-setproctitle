@@ -1,0 +1,10 @@
+Changes
+Makefile.PL
+MANIFEST
+ppport.h
+setproctitle.xs
+README
+t/BSD-progname.t
+t/BSD-setproctitle.t
+lib/BSD/setproctitle.pm
+META.yml                                 Module meta-data (added by MakeMaker)
